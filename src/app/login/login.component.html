@@ -1,0 +1,19 @@
+<div class = 'container'>
+  <div class="row">
+    <div class="col-md-6 pt-5">
+
+   
+<form #myForm='ngForm'>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" [(ngModel)]='userName' name='name' 
+    required  placeholder="Name">
+  </div>
+  
+   <button (click)='login(myForm)' type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+   

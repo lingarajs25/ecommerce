@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card-columns">
+    <div class="row">
+      <div class="pt-5">
+        <div *ngIf='appService.loadingData'>Loading....</div>
+        <div *ngIf='!appService.loadingData' class="card-group">
+          <div>
+            <div *ngFor='let p of categoryProduct' class="col-lg-3">
+              <div class="card" style="width: 18rem;">
+                <h4>{{p.name}}</h4>
+                <img [src]="p.img" class="card-img-top" alt="{{p.name}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{p.price}}</h5>
+                  <p class="card-text">{{p.description}}</p>
+
+                  <button type="submit" class="btn btn-primary" (click)='productDetails(p.id)'>More Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
